@@ -37,7 +37,7 @@ class MangaLibApi:
         except:
             typeM = "Манга"
 
-        return Manga(name, chapterCount, desc, rate, tags, similar, img, typeM)
+        return {'name': name, 'chapterCount': chapterCount, 'desc': desc, 'rate': rate, 'tags': tags, 'similar': similar, 'img': img, 'typeM': typeM}
 
     def _getSpecName_(self, name):
         mangas = json.loads("".join(open("mangas.json", "r", encoding="UTF-8").readlines()))
@@ -77,4 +77,4 @@ class Manga:
         self.typeM = typeM
 
     def __str__(self):
-        return f"( Manga: ( name: {self.name}, chapterCount: {self.chapterCount}, desc: {self.desc}, rate: {self.rate}, tags: {self.tags}, similar: {self.similar}, tags: {self.tags}, imgUrl: {self.imgUrl} )"
+        return {'name': self.name, 'chapterCount': self.chapterCount, 'desc': self.desc, 'rate': self.rate, 'tags': self.tags, 'similar': self.similar, 'tags': self.tags, 'imgUrl': self.imgUrl}
