@@ -3,15 +3,16 @@
 <b> Для удобства далее манг, манхва, маньхуа и т.п. будет называться одним словом - манга <\b>
 
 1. Откройте мангу на mangalib
-2. В адресной строке скопируйте ID манги:
+2. В адресной строке скопируйте ID манги
 ```
 В данном случае ID: ore-no-genjitsu-wa-renai-game-ka-to-omottara-inochigake-no-game-datta
 https://mangalib.me/ore-no-genjitsu-wa-renai-game-ka-to-omottara-inochigake-no-game-datta/v12/c48?page=46
 ```
-```python
+3. Вставьте эту строку в... (в файле main.py)
+```python 
 d = api.getManga(id="")
 ```
-3. Вам выведутся похожие тайтлы
+4. Вам выведутся похожие тайтлы
 
 Необходимые библиотеки
 ```
